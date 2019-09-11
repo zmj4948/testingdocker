@@ -16,6 +16,8 @@ public class UDPClient {
             System.out.println("Reply: "+new String(reply.getData()));
         } catch (Exception e) {
             e.printStackTrace();
+        } finally{
+            if (aSocket !=null) aSocket.close();
         }
     }
 }
